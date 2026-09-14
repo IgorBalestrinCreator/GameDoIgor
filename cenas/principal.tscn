@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bkemexswaks4u"]
+
+[ext_resource type="Script" uid="uid://cqp3ve2lwyp8c" path="res://cenas/character_body_2d.gd" id="1_j2ut6"]
+[ext_resource type="Texture2D" uid="uid://msuigyqfhl2n" path="res://imagens/Pixel Crawler - Free Pack/MockUps/Tavern.png" id="2_j2ut6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4poq"]
+size = Vector2(129.5, 132)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_013d3"]
+size = Vector2(1769, 125.5)
+
+[node name="principal" type="Node2D" unique_id=1192887808]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=877899511]
+position = Vector2(-1, 0)
+script = ExtResource("1_j2ut6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=293698400]
+position = Vector2(185, 138)
+shape = SubResource("RectangleShape2D_b4poq")
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1465718824]
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D" unique_id=345005629]
+position = Vector2(0, -86)
+texture = ExtResource("2_j2ut6")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1652223494]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1584264036]
+position = Vector2(276, 278.25)
+shape = SubResource("RectangleShape2D_013d3")
